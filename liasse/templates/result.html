@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>liasse — {{ k1.partnership_name }} ({{ k1.tax_year }})</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1rem; color: #1a1a1a; }
+  h1 { font-size: 1.4rem; margin-bottom: 0; }
+  .summary { color: #444; margin-top: 0.25rem; }
+  .ok { background: #eafbea; border: 1px solid #b6e3b6; padding: 0.9rem 1rem; border-radius: 6px; margin-top: 1.5rem; }
+  .flag { border: 1px solid #f0c36d; background: #fffaf0; border-radius: 6px; padding: 1rem; margin-top: 1.5rem; }
+  .flag h3 { margin: 0 0 0.4rem 0; font-size: 0.95rem; }
+  .flag .tag { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; background: #f0c36d; color: #4a3200; padding: 0.15rem 0.5rem; border-radius: 3px; margin-bottom: 0.5rem; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 180px; font-family: ui-monospace, monospace; font-size: 0.85rem; padding: 0.6rem; border: 1px solid #ccc; border-radius: 4px; margin-top: 0.5rem; }
+  .row { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+  button { padding: 0.45rem 0.9rem; border: none; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+  button.primary { background: #1a1a1a; color: #fff; }
+  button.primary:hover { background: #333; }
+  button.ghost { background: #fff; border: 1px solid #ccc; }
+  button.ghost:hover { background: #f5f5f5; }
+  .status { background: #eef4ff; border: 1px solid #b6cdf0; padding: 0.7rem 1rem; border-radius: 6px; margin-bottom: 1rem; font-size: 0.9rem; }
+  .ledger-confirm { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid #eee; }
+  a.back { font-size: 0.85rem; color: #666; }
+</style>
+</head>
+<body>
+  <p><a class="back" href="{{ url_for('upload_form') }}">&larr; check another K-1</a></p>
+
+  {% if status_message %}<div class="status">{{ status_message }}</div>{% endif %}
+
+  <h1>{{ k1.partnership_name }}</h1>
+  <p class="summary">{{ k1.partner_name }} &middot; tax year {{ k1.tax_year }} &middot; EIN {{ k1.partnership_ein }}</p>
+  <p class="summary">
+    Beginning capital account: {{ k1.beginning_capital_account if k1.beginning_capital_account is not none else "—" }}
+    &nbsp;|&nbsp;
+    Ending capital account: {{ k1.ending_capital_account if k1.ending_capital_account is not none else "—" }}
+    &nbsp;|&nbsp;
+    Prior-year ending basis on file: {{ prior_ending_basis if prior_ending_basis is not none else "none" }}
+  </p>
+
+  {% if not drafts %}
+    <div class="ok">Basis carries forward cleanly — no flags.</div>
+  {% endif %}
+
+  {% for draft in drafts %}
+    <div class="flag">
+      <span class="tag">{{ draft.flag_type.replace('_', ' ') }}</span>
+      <h3>{{ draft.message }}</h3>
+      <form action="{{ url_for('save_draft') }}" method="post">
+        <input type="hidden" name="partner_name" value="{{ k1.partner_name }}">
+        <input type="hidden" name="partnership_name" value="{{ k1.partnership_name }}">
+        <input type="hidden" name="partnership_ein" value="{{ k1.partnership_ein }}">
+        <input type="hidden" name="tax_year" value="{{ k1.tax_year }}">
+        <input type="hidden" name="beginning_capital_account" value="{{ k1.beginning_capital_account if k1.beginning_capital_account is not none else '' }}">
+        <input type="hidden" name="ending_capital_account" value="{{ k1.ending_capital_account if k1.ending_capital_account is not none else '' }}">
+        <input type="hidden" name="ledger_path" value="{{ ledger_path }}">
+        <input type="hidden" name="outbox_path" value="{{ outbox_path }}">
+        <input type="hidden" name="flag_type" value="{{ draft.flag_type }}">
+        <textarea name="draft_text" id="draft-{{ draft.flag_type }}">{{ draft.draft }}</textarea>
+        <div class="row">
+          <button type="submit" class="primary">Save draft to outbox</button>
+          <button type="button" class="ghost" onclick="copyDraft('draft-{{ draft.flag_type }}')">Copy to clipboard</button>
+        </div>
+      </form>
+    </div>
+  {% endfor %}
+
+  {% if k1.ending_capital_account is not none %}
+    <div class="ledger-confirm">
+      <form action="{{ url_for('confirm_ledger') }}" method="post">
+        <input type="hidden" name="partner_name" value="{{ k1.partner_name }}">
+        <input type="hidden" name="partnership_name" value="{{ k1.partnership_name }}">
+        <input type="hidden" name="partnership_ein" value="{{ k1.partnership_ein }}">
+        <input type="hidden" name="tax_year" value="{{ k1.tax_year }}">
+        <input type="hidden" name="beginning_capital_account" value="{{ k1.beginning_capital_account if k1.beginning_capital_account is not none else '' }}">
+        <input type="hidden" name="ending_capital_account" value="{{ k1.ending_capital_account }}">
+        <input type="hidden" name="ledger_path" value="{{ ledger_path }}">
+        <input type="hidden" name="outbox_path" value="{{ outbox_path }}">
+        <button type="submit" class="primary">Confirm &amp; record {{ k1.tax_year }} ending basis for next year</button>
+      </form>
+    </div>
+  {% else %}
+    <p class="summary" style="margin-top: 2rem;">No ending capital account on this K-1 — nothing to record in the ledger yet.</p>
+  {% endif %}
+
+  <script>
+    function copyDraft(id) {
+      const el = document.getElementById(id);
+      el.select();
+      navigator.clipboard.writeText(el.value);
+    }
+  </script>
+</body>
+</html>

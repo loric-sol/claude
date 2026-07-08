@@ -8,9 +8,12 @@ dependencies = []
 [project.optional-dependencies]
 # Only needed once you swap in a real extractor (LidoK1Extractor / K1xExtractor).
 vendor = ["requests"]
+# Only needed to run the local web UI (liasse/webapp.py).
+web = ["flask"]
 
 [project.scripts]
 liasse = "liasse.cli:main"
+liasse-web = "liasse.webapp:main"
 
 [build-system]
 requires = ["setuptools>=61"]
@@ -18,3 +21,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["liasse*"]
+
+[tool.setuptools.package-data]
+liasse = ["templates/*.html"]

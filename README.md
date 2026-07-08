@@ -67,9 +67,36 @@ Run it again and it'll also update `examples/ledger.csv` with the 2025
 ending basis, so a 2026 K-1 for the same partner/partnership would compare
 against that.
 
+## Web UI
+
+A minimal single-user local web page, for reviewing flags and editing a
+draft before it goes out, instead of reading a CLI printout.
+
+```bash
+pip install -e ".[web]"
+liasse-web
+# or: python -m liasse.webapp
+```
+
+Then open http://127.0.0.1:5000. Flow:
+
+1. Upload a K-1 extraction JSON (same format the CLI takes — try
+   `examples/k1_2025.json` or anything in `tests/fixtures/`), and point it at
+   your ledger CSV and outbox folder.
+2. See the flag (if any), with an editable textarea pre-filled with the
+   draft email — edit the wording, then **Save draft to outbox** (writes
+   your edited text, not the template default) or **Copy to clipboard**.
+3. Separately, **Confirm & record ending basis for next year** writes to the
+   ledger. It's a separate button on purpose — reviewing a K-1 shouldn't
+   silently mutate the ledger; recording it is a deliberate action.
+
+The dev server (`app.run(debug=True)` under the hood) is for local,
+single-user use only — it isn't meant to be exposed to a network.
+
 ## Tests
 
-Stdlib only, no pytest required:
+Stdlib only, no pytest required (the web UI isn't covered by these — it
+needs `flask` installed):
 
 ```bash
 python -m unittest discover -s tests
@@ -85,6 +112,8 @@ liasse/
   flags.py           the actual basis-comparison rule
   correspondence.py  static-template client email drafts
   cli.py             `liasse <k1.json> --ledger ledger.csv`
+  webapp.py          local Flask UI: upload, review flags, edit/save drafts
+  templates/         upload.html, result.html
 examples/            a runnable end-to-end demo (mismatch scenario)
 tests/               unit + CLI end-to-end tests, fixtures for all 3 flag types
 ```
@@ -94,4 +123,3 @@ tests/               unit + CLI end-to-end tests, fixtures for all 3 flag types
 - Swap in the real Lido/K1x extractor (see above).
 - Replace the static `correspondence.py` template with a Claude API call so
   wording adapts to the specifics of each flag instead of filling blanks.
-- Only after that: consider whether it's worth a UI for other solo preparers.
