@@ -1,0 +1,9 @@
+{
+  "partner_name": "Sam Client",
+  "partnership_name": "Riverbend Properties LP",
+  "partnership_ein": "98-7654321",
+  "tax_year": 2025,
+  "beginning_capital_account": "31000.00",
+  "ending_capital_account": "40500.00",
+  "client_email": "sam.client@example.com"
+}

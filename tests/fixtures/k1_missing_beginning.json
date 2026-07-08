@@ -1,0 +1,9 @@
+{
+  "partner_name": "Jane Doe",
+  "partnership_name": "Acme Holdings LP",
+  "partnership_ein": "12-3456789",
+  "tax_year": 2025,
+  "beginning_capital_account": null,
+  "ending_capital_account": "62000.00",
+  "client_email": "jane@example.com"
+}

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+outbox/
+examples/outbox/
+.venv/
+*.egg-info/
