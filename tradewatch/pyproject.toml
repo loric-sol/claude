@@ -1,0 +1,20 @@
+[project]
+name = "tradewatch"
+version = "0.1.0"
+description = "Heuristic trade-surveillance detectors (wash-trade and spoofing patterns) for public exchange data"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+# Only needed once you point ingestion at a live exchange via CCXTDataSource.
+live = ["ccxt"]
+
+[project.scripts]
+tradewatch = "tradewatch.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["tradewatch*"]

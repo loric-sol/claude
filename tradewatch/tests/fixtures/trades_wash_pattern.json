@@ -1,0 +1,566 @@
+[
+  {
+    "timestamp": 2.13,
+    "price": "49999.80",
+    "amount": "0.1389",
+    "side": "buy"
+  },
+  {
+    "timestamp": 3.72,
+    "price": "49997.32",
+    "amount": "0.4047",
+    "side": "sell"
+  },
+  {
+    "timestamp": 5.82,
+    "price": "49999.24",
+    "amount": "0.7761",
+    "side": "sell"
+  },
+  {
+    "timestamp": 9.8,
+    "price": "49998.56",
+    "amount": "0.7374",
+    "side": "buy"
+  },
+  {
+    "timestamp": 10.56,
+    "price": "49996.10",
+    "amount": "0.6106",
+    "side": "sell"
+  },
+  {
+    "timestamp": 14.4,
+    "price": "49993.90",
+    "amount": "0.6652",
+    "side": "sell"
+  },
+  {
+    "timestamp": 18.0,
+    "price": "49995.12",
+    "amount": "0.2235",
+    "side": "sell"
+  },
+  {
+    "timestamp": 19.88,
+    "price": "49993.07",
+    "amount": "0.7625",
+    "side": "sell"
+  },
+  {
+    "timestamp": 21.8,
+    "price": "49994.43",
+    "amount": "0.3621",
+    "side": "sell"
+  },
+  {
+    "timestamp": 23.41,
+    "price": "49996.47",
+    "amount": "0.0513",
+    "side": "sell"
+  },
+  {
+    "timestamp": 26.84,
+    "price": "49994.19",
+    "amount": "0.7448",
+    "side": "buy"
+  },
+  {
+    "timestamp": 30.5,
+    "price": "49992.93",
+    "amount": "0.3292",
+    "side": "sell"
+  },
+  {
+    "timestamp": 32.36,
+    "price": "49995.15",
+    "amount": "0.1073",
+    "side": "sell"
+  },
+  {
+    "timestamp": 35.51,
+    "price": "49997.28",
+    "amount": "0.2605",
+    "side": "buy"
+  },
+  {
+    "timestamp": 38.93,
+    "price": "49995.99",
+    "amount": "0.7517",
+    "side": "buy"
+  },
+  {
+    "timestamp": 42.83,
+    "price": "49995.61",
+    "amount": "0.2867",
+    "side": "sell"
+  },
+  {
+    "timestamp": 46.08,
+    "price": "49995.18",
+    "amount": "0.0718",
+    "side": "sell"
+  },
+  {
+    "timestamp": 49.77,
+    "price": "49997.82",
+    "amount": "0.4619",
+    "side": "buy"
+  },
+  {
+    "timestamp": 50.45,
+    "price": "49999.21",
+    "amount": "0.3881",
+    "side": "buy"
+  },
+  {
+    "timestamp": 53.2,
+    "price": "49997.93",
+    "amount": "0.0867",
+    "side": "buy"
+  },
+  {
+    "timestamp": 54.3,
+    "price": "49997.42",
+    "amount": "0.2613",
+    "side": "sell"
+  },
+  {
+    "timestamp": 57.39,
+    "price": "50000.28",
+    "amount": "0.2451",
+    "side": "buy"
+  },
+  {
+    "timestamp": 58.94,
+    "price": "50000.62",
+    "amount": "0.3458",
+    "side": "buy"
+  },
+  {
+    "timestamp": 61.69,
+    "price": "49998.07",
+    "amount": "0.4255",
+    "side": "sell"
+  },
+  {
+    "timestamp": 64.12,
+    "price": "49997.79",
+    "amount": "0.2996",
+    "side": "sell"
+  },
+  {
+    "timestamp": 66.11,
+    "price": "49998.08",
+    "amount": "0.2331",
+    "side": "buy"
+  },
+  {
+    "timestamp": 67.81,
+    "price": "49995.63",
+    "amount": "0.2293",
+    "side": "sell"
+  },
+  {
+    "timestamp": 71.14,
+    "price": "49993.84",
+    "amount": "0.0651",
+    "side": "sell"
+  },
+  {
+    "timestamp": 72.98,
+    "price": "49995.32",
+    "amount": "0.2075",
+    "side": "sell"
+  },
+  {
+    "timestamp": 74.67,
+    "price": "49992.69",
+    "amount": "0.2581",
+    "side": "sell"
+  },
+  {
+    "timestamp": 75.61,
+    "price": "49992.71",
+    "amount": "0.5222",
+    "side": "buy"
+  },
+  {
+    "timestamp": 76.43,
+    "price": "49995.09",
+    "amount": "0.3384",
+    "side": "sell"
+  },
+  {
+    "timestamp": 78.44,
+    "price": "49993.96",
+    "amount": "0.6608",
+    "side": "buy"
+  },
+  {
+    "timestamp": 79.39,
+    "price": "49993.51",
+    "amount": "0.6228",
+    "side": "sell"
+  },
+  {
+    "timestamp": 83.28,
+    "price": "49993.45",
+    "amount": "0.1049",
+    "side": "sell"
+  },
+  {
+    "timestamp": 87.18,
+    "price": "49991.94",
+    "amount": "0.1318",
+    "side": "buy"
+  },
+  {
+    "timestamp": 88.21,
+    "price": "49994.77",
+    "amount": "0.1317",
+    "side": "sell"
+  },
+  {
+    "timestamp": 89.01,
+    "price": "49996.43",
+    "amount": "0.051",
+    "side": "buy"
+  },
+  {
+    "timestamp": 90.32,
+    "price": "49998.95",
+    "amount": "0.5341",
+    "side": "sell"
+  },
+  {
+    "timestamp": 120.0,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "buy"
+  },
+  {
+    "timestamp": 121.5,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "sell"
+  },
+  {
+    "timestamp": 123.0,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "buy"
+  },
+  {
+    "timestamp": 124.5,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "sell"
+  },
+  {
+    "timestamp": 126.0,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "buy"
+  },
+  {
+    "timestamp": 127.5,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "sell"
+  },
+  {
+    "timestamp": 129.0,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "buy"
+  },
+  {
+    "timestamp": 130.5,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "sell"
+  },
+  {
+    "timestamp": 132.0,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "buy"
+  },
+  {
+    "timestamp": 133.5,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "sell"
+  },
+  {
+    "timestamp": 135.0,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "buy"
+  },
+  {
+    "timestamp": 136.5,
+    "price": "50000.00",
+    "amount": "1.2000",
+    "side": "sell"
+  },
+  {
+    "timestamp": 183.87,
+    "price": "50000.76",
+    "amount": "0.4462",
+    "side": "sell"
+  },
+  {
+    "timestamp": 186.81,
+    "price": "49998.43",
+    "amount": "0.1028",
+    "side": "buy"
+  },
+  {
+    "timestamp": 188.67,
+    "price": "49996.77",
+    "amount": "0.5008",
+    "side": "buy"
+  },
+  {
+    "timestamp": 191.05,
+    "price": "49999.75",
+    "amount": "0.259",
+    "side": "sell"
+  },
+  {
+    "timestamp": 193.81,
+    "price": "50002.05",
+    "amount": "0.4065",
+    "side": "buy"
+  },
+  {
+    "timestamp": 196.22,
+    "price": "49999.23",
+    "amount": "0.3589",
+    "side": "sell"
+  },
+  {
+    "timestamp": 196.92,
+    "price": "49997.39",
+    "amount": "0.7136",
+    "side": "sell"
+  },
+  {
+    "timestamp": 197.7,
+    "price": "49995.76",
+    "amount": "0.3682",
+    "side": "sell"
+  },
+  {
+    "timestamp": 198.99,
+    "price": "49992.96",
+    "amount": "0.3035",
+    "side": "sell"
+  },
+  {
+    "timestamp": 200.76,
+    "price": "49992.34",
+    "amount": "0.0551",
+    "side": "sell"
+  },
+  {
+    "timestamp": 203.85,
+    "price": "49992.37",
+    "amount": "0.2039",
+    "side": "buy"
+  },
+  {
+    "timestamp": 205.44,
+    "price": "49994.29",
+    "amount": "0.2231",
+    "side": "buy"
+  },
+  {
+    "timestamp": 206.87,
+    "price": "49996.63",
+    "amount": "0.1318",
+    "side": "sell"
+  },
+  {
+    "timestamp": 209.5,
+    "price": "49999.01",
+    "amount": "0.4138",
+    "side": "buy"
+  },
+  {
+    "timestamp": 213.32,
+    "price": "49996.89",
+    "amount": "0.3451",
+    "side": "buy"
+  },
+  {
+    "timestamp": 213.91,
+    "price": "49997.47",
+    "amount": "0.3615",
+    "side": "buy"
+  },
+  {
+    "timestamp": 215.05,
+    "price": "49997.17",
+    "amount": "0.584",
+    "side": "sell"
+  },
+  {
+    "timestamp": 218.12,
+    "price": "50000.16",
+    "amount": "0.7487",
+    "side": "sell"
+  },
+  {
+    "timestamp": 219.28,
+    "price": "50001.07",
+    "amount": "0.4436",
+    "side": "sell"
+  },
+  {
+    "timestamp": 219.89,
+    "price": "50002.06",
+    "amount": "0.334",
+    "side": "sell"
+  },
+  {
+    "timestamp": 223.84,
+    "price": "50001.71",
+    "amount": "0.1317",
+    "side": "buy"
+  },
+  {
+    "timestamp": 225.32,
+    "price": "50000.82",
+    "amount": "0.7666",
+    "side": "buy"
+  },
+  {
+    "timestamp": 227.79,
+    "price": "50002.37",
+    "amount": "0.3351",
+    "side": "sell"
+  },
+  {
+    "timestamp": 231.16,
+    "price": "50001.96",
+    "amount": "0.0869",
+    "side": "sell"
+  },
+  {
+    "timestamp": 232.35,
+    "price": "50002.21",
+    "amount": "0.3848",
+    "side": "sell"
+  },
+  {
+    "timestamp": 234.12,
+    "price": "50004.59",
+    "amount": "0.0727",
+    "side": "sell"
+  },
+  {
+    "timestamp": 235.49,
+    "price": "50005.34",
+    "amount": "0.3536",
+    "side": "sell"
+  },
+  {
+    "timestamp": 236.11,
+    "price": "50002.72",
+    "amount": "0.7401",
+    "side": "sell"
+  },
+  {
+    "timestamp": 237.29,
+    "price": "50000.10",
+    "amount": "0.5042",
+    "side": "sell"
+  },
+  {
+    "timestamp": 238.75,
+    "price": "50002.85",
+    "amount": "0.5127",
+    "side": "sell"
+  },
+  {
+    "timestamp": 241.86,
+    "price": "50003.99",
+    "amount": "0.7432",
+    "side": "sell"
+  },
+  {
+    "timestamp": 242.37,
+    "price": "50005.52",
+    "amount": "0.7373",
+    "side": "buy"
+  },
+  {
+    "timestamp": 242.96,
+    "price": "50003.92",
+    "amount": "0.4064",
+    "side": "sell"
+  },
+  {
+    "timestamp": 246.8,
+    "price": "50003.24",
+    "amount": "0.2383",
+    "side": "sell"
+  },
+  {
+    "timestamp": 250.15,
+    "price": "50001.04",
+    "amount": "0.4224",
+    "side": "buy"
+  },
+  {
+    "timestamp": 253.46,
+    "price": "50002.47",
+    "amount": "0.6671",
+    "side": "buy"
+  },
+  {
+    "timestamp": 256.08,
+    "price": "50001.44",
+    "amount": "0.2897",
+    "side": "sell"
+  },
+  {
+    "timestamp": 259.33,
+    "price": "50002.01",
+    "amount": "0.4339",
+    "side": "sell"
+  },
+  {
+    "timestamp": 262.46,
+    "price": "50000.49",
+    "amount": "0.0985",
+    "side": "buy"
+  },
+  {
+    "timestamp": 264.65,
+    "price": "50000.76",
+    "amount": "0.1705",
+    "side": "sell"
+  },
+  {
+    "timestamp": 268.24,
+    "price": "50003.69",
+    "amount": "0.2487",
+    "side": "buy"
+  },
+  {
+    "timestamp": 269.47,
+    "price": "50003.22",
+    "amount": "0.7913",
+    "side": "sell"
+  },
+  {
+    "timestamp": 270.58,
+    "price": "50001.02",
+    "amount": "0.3957",
+    "side": "buy"
+  }
+]
