@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. The public page swaps them per theme via [data-theme];
+ * the dashboard always uses the default (blush) palette.
+ */
+:root,
+[data-theme="blush"] {
+  --page: #fbf6f1;
+  --surface: #fffdfb;
+  --ink: #2b201b;
+  --muted: #7a6a62;
+  --accent: #ebcfc8;
+  --accent-soft: #f6e6e1;
+  --line: #eadfd7;
+  --cta: #2b201b;
+  --cta-ink: #fffaf6;
+  --star: #b9806f;
+}
+[data-theme="linen"] {
+  --page: #f5f0e8;
+  --surface: #fbf8f3;
+  --ink: #231c17;
+  --muted: #776a5d;
+  --accent: #cdb89c;
+  --accent-soft: #ebe1d3;
+  --line: #e2d8c9;
+  --cta: #3b2e25;
+  --cta-ink: #fbf6ef;
+  --star: #a1835f;
+}
+[data-theme="sage"] {
+  --page: #f4f3ee;
+  --surface: #fbfbf8;
+  --ink: #1f2420;
+  --muted: #687064;
+  --accent: #b7c1ae;
+  --accent-soft: #e2e7dc;
+  --line: #dfe2d8;
+  --cta: #2d362e;
+  --cta-ink: #f7f8f3;
+  --star: #7f8c72;
+}
+[data-theme="noir"] {
+  --page: #16120f;
+  --surface: #211b17;
+  --ink: #f6efe7;
+  --muted: #b3a597;
+  --accent: #d9c1a3;
+  --accent-soft: #2e2620;
+  --line: #3a3029;
+  --cta: #d9c1a3;
+  --cta-ink: #16120f;
+  --star: #d9c1a3;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-line: var(--line);
+  --color-cta: var(--cta);
+  --color-cta-ink: var(--cta-ink);
+  --color-star: var(--star);
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --shadow-soft: 0 1px 2px rgb(43 32 27 / 0.04), 0 8px 24px -12px rgb(43 32 27 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(43 32 27 / 0.05), 0 18px 40px -18px rgb(43 32 27 / 0.25);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-page text-ink font-sans antialiased;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: var(--accent);
+  }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition
+    disabled:cursor-not-allowed disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-cta text-cta-ink hover:opacity-90 active:scale-[0.99];
+}
+@utility btn-secondary {
+  @apply btn border border-line bg-surface text-ink hover:border-ink/40;
+}
+@utility btn-ghost {
+  @apply btn text-ink hover:bg-accent-soft;
+}
+@utility btn-danger {
+  @apply btn border border-red-200 bg-white text-red-700 hover:bg-red-50;
+}
+@utility input {
+  @apply w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-[15px] text-ink placeholder:text-muted/70
+    shadow-[inset_0_1px_1px_rgb(0_0_0/0.02)] transition focus:border-ink/50 focus:outline-none focus:ring-2 focus:ring-accent;
+}
+  .label {
+  @apply mb-1.5 block text-sm font-medium text-ink;
+}
+@utility hint {
+  @apply mt-1.5 text-xs text-muted;
+}
+@utility card {
+  @apply rounded-2xl border border-line bg-surface shadow-soft;
+}
+@utility eyebrow {
+  @apply text-[11px] font-medium uppercase tracking-[0.18em] text-muted;
+}
+
+.input[aria-invalid="true"] {
+  @apply border-red-400 focus:ring-red-100;
+}
